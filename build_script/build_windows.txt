@@ -1,0 +1,35 @@
+
+
+cd ..
+python misc\scripts\install_d3d12_sdk_windows.py
+scons platform=windows vsproj=yes d3d12=no target=editor module_mono_enabled=yes use_mingw=yes use_llvm=yes
+
+scons platform=windows precision=double d3d12=yes target=editor module_mono_enabled=yes use_mingw=yes use_llvm=yes
+
+
+python -m pip install scons --break-system-packages
+
+0.
+安装MSYS2
+安装python python-pip 
+pacman -S python python-pip 
+安装scons
+python -m pip install scons --break-system-packages
+切换Clang64环境
+安装Clang
+pacman -S clang
+
+pacman -Sy make
+pacman -Sy pkgconf
+
+
+bin文件夹放._sc_文件做自包含模式
+
+pip install certifi
+
+1.
+python misc/scripts/install_d3d12_sdk_windows.py
+注意C:\Users\Administrator\AppData\Local\Godot\build_deps\ 一堆文件如C:\Users\Administrator\AppData\Local\Godot\build_deps\mesa-x86_64-msvc
+
+
+scons platform=windows precision=double d3d12=no target=editor module_mono_enabled=yes 
